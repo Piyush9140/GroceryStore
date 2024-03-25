@@ -38,20 +38,39 @@ export const colors = {
     900: '#111827',
     950: '#030712',
   },
-  warning:{
+  warning: {
     50: '#FEFCE8',
     100: '#FEF9C3',
     200: '#FDE047',
     300: '#EAB308',
   },
-  error:{
+  error: {
     50: '#FEF2F2',
     100: '#FEE2E2',
     200: '#FCA5A5',
     300: '#EF4444',
   },
-  common:{
+  common: {
     white: '#FFFFFF',
-    black: '#000000'
-  }
+    black: '#000000',
+  },
+};
+
+export const fonts = {
+  Bold: 'Inter-Bold',
+  ExtraBold: 'Inter-ExtraBold',
+  Light: 'Inter-Light',
+  ExtraLight: 'Inter-Extra',
+  Medium: 'Inter-Medium',
+  Regular: 'Inter-Regular',
+  Thin: 'Inter-Thin',
+  Black: 'Inter-Black',
+  DisplayMedium: 'InterDisplay-Medium',
+  DisplayLarge: 'InterDisplay-ExtraBold',
+  DisplaySmall: 'InterDisplay-Light',
+  DisplayRegular: 'InterDisplay-Regular',
+  DisplaySemiBold: 'InterDisplay-SemiBold',
+  DisplayThin: 'InterDisplay-Thin',
+  DisplayBlack: 'InterDisplay-Black',
+  DisplayBold: 'InterDisplay-Bold',
 };
