@@ -5,7 +5,7 @@ import {Button, Input, Text, useTheme} from 'native-base';
 export const Login = () => {
   const {colors} = useTheme();
   return (
-    <>
+    <View flex={1} bg="primary.50">
       <View style={styles.imageBackground}>
         <Image
           source={require('../assets/images/20450388_Vitamins.png')}
@@ -29,33 +29,30 @@ export const Login = () => {
           bg="common.white"
           marginTop={5}
           rounded={13}
+          fontSize="lg"
+          keyboardType="number-pad"
+          maxLength={10}
+          blurOnSubmit
         />
         <Button
           size="md"
-          width="100%"
+          w="100%"
           marginTop={2}
           rounded={13}
           bg="primary.500"
           onPress={() => {}}>
           Continue
         </Button>
-        <View
-          style={{
-            flex: 1,
-            flexDirection: 'row',
-            alignItems: 'flex-end',
-            padding: 10,
-          }}>
+        <View style={styles.footer}>
           <Text fontSize={10} color="accent.400">
-            By proceeding, you agree to our
+            By proceeding, you agree to our{' '}
           </Text>
           <Text fontSize={10} color="accent.500" underline>
-            {' '}
             Terms & Conditions and Privacy policy.
           </Text>
         </View>
       </View>
-    </>
+    </View>
   );
 };
 
@@ -75,5 +72,11 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     paddingHorizontal: 20,
     backgroundColor: '#FFF7ED',
+  },
+  footer: {
+    flex: 1,
+    flexDirection: 'row',
+    alignItems: 'center',
+    padding: 10,
   },
 });
