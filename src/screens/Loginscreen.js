@@ -2,7 +2,7 @@ import React from 'react';
 import {StyleSheet, View, Image} from 'react-native';
 import {Button, Input, Text, useTheme} from 'native-base';
 
-export const Login = () => {
+export const Login = ({navigation}) => {
   const {colors} = useTheme();
   return (
     <View flex={1} bg="primary.50">
@@ -40,7 +40,9 @@ export const Login = () => {
           marginTop={2}
           rounded={13}
           bg="primary.500"
-          onPress={() => {}}>
+          onPress={() => {
+            navigation.navigate('OTP');
+          }}>
           Continue
         </Button>
         <View style={styles.footer}>

@@ -1,10 +1,12 @@
 import React, {useEffect, useRef, useState} from 'react';
 import {Center, Divider, Input, Text, View} from 'native-base';
+import {useFocusEffect} from '@react-navigation/native';
 
-export const OTP = ({countdown}) => {
+export const OTP = ({countdown, onOtpComplete}) => {
   const inputRefs = useRef([]);
   const [resendTime, setResendTime] = useState(countdown);
   const [isResendEnabled, setIsResendEnabled] = useState(false);
+  const [Otp, setOtp] = useState('');
 
   useEffect(() => {
     let interval;
@@ -23,11 +25,30 @@ export const OTP = ({countdown}) => {
     setResendTime(countdown);
   };
 
+  useEffect(() => {
+    if (Otp.length === 4) {
+      onOtpComplete(Otp);
+    }
+  }, [Otp]);
+
+  useFocusEffect(
+    React.useCallback(() => {
+      setOtp('');
+      setResendTime(countdown);
+      setIsResendEnabled(false);
+    }, []),
+  );
+
   const focusNextInput = (index, txt) => {
     if (txt.length === 0 && index > 0) {
       inputRefs.current[index - 1].focus();
     } else if (txt != 0 && index < inputRefs.current.length - 1) {
       inputRefs.current[index + 1].focus();
+    }
+    if (txt.length === 1) {
+      setOtp(prevOtp => prevOtp + txt);
+    } else if (txt.length === 0) {
+      setOtp(prevOtp => prevOtp.slice(0, -1));
     }
   };
 

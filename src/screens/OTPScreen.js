@@ -4,7 +4,10 @@ import {OTP} from '../components/OTP';
 import {ImageBackground, StyleSheet, Dimensions} from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
 
-export const OTPScreen = () => {
+export const OTPScreen = ({navigation}) => {
+  const handleOtpComplete = () => {
+    navigation.replace('Personal Details')
+  }
   return (
     <ImageBackground
       source={require('../assets/images/20450388_Vitamins.png')}
@@ -22,7 +25,7 @@ export const OTPScreen = () => {
               +91 96865 29842
             </Text>
           </Center>
-          <OTP countdown={10} />
+          <OTP countdown={60} onOtpComplete={handleOtpComplete}/>
         </LinearGradient>
       </View>
     </ImageBackground>
