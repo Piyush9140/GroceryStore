@@ -1,8 +1,11 @@
 import {Button, Center, Input, Text, View} from 'native-base';
-import React from 'react';
+import React, {useState} from 'react';
 import {StyleSheet} from 'react-native';
 
 export const PersonalDetails = () => {
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const isContinueDisabled = (name === '' || email === '');
   return (
     <View flex={1}>
       <View p={5}>
@@ -10,6 +13,8 @@ export const PersonalDetails = () => {
           Full Name*
         </Text>
         <Input
+          value={name}
+          onChangeText={txt => setName(txt)}
           variant={'filled'}
           rounded={15}
           mb={10}
@@ -20,12 +25,14 @@ export const PersonalDetails = () => {
           Email ID*
         </Text>
         <Input
+          value={email}
+          onChangeText={txt => setEmail(txt)}
           variant={'filled'}
           rounded={15}
           mb={10}
           bg={'accent.200'}
           placeholder={'Enter Here'}
-          keyboardType='email-address'
+          keyboardType="email-address"
         />
         <Text mb={2} bold>
           Secondary Mobile Number(Optional)
@@ -41,7 +48,7 @@ export const PersonalDetails = () => {
           bg={'accent.200'}
           placeholder={'Enter Here'}
           fontSize="sm"
-          keyboardType='number-pad'
+          keyboardType="number-pad"
         />
       </View>
       <View flex={1} justifyContent={'flex-end'}>
@@ -56,8 +63,9 @@ export const PersonalDetails = () => {
               w={'100%'}
               h={50}
               rounded={12}
-              bg={'primary.500'}
-              _text={{fontSize: 'lg'}}>
+              bg={isContinueDisabled ? 'accent.500' : 'primary.500'}
+              _text={{fontSize: 'lg'}}
+              disabled={isContinueDisabled}>
               Continue
             </Button>
           </Center>
