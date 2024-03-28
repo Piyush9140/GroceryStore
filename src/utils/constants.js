@@ -57,6 +57,7 @@ export const colors = {
 };
 
 export const fonts = {
+  Inter: 'Inter',
   Bold: 'Inter-Bold',
   ExtraBold: 'Inter-ExtraBold',
   Light: 'Inter-Light',
