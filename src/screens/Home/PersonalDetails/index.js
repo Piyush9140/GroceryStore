@@ -4,7 +4,8 @@ import React, {useState} from 'react';
 export const PersonalDetails = ({navigation}) => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
-  const isContinueDisabled = name === '' || email === '';
+  const [mobileNo, setMobileNo] = useState('');
+  const isContinueDisabled = name === '' || email === '' || mobileNo === '';
   return (
     <View flex={1}>
       <View p={5}>
@@ -16,7 +17,7 @@ export const PersonalDetails = ({navigation}) => {
           onChangeText={txt => setName(txt)}
           variant={'filled'}
           rounded={15}
-          mb={10}
+          mb={5}
           bg={'accent.200'}
           placeholder={'Enter Here'}
         />
@@ -28,13 +29,13 @@ export const PersonalDetails = ({navigation}) => {
           onChangeText={txt => setEmail(txt)}
           variant={'filled'}
           rounded={15}
-          mb={10}
+          mb={5}
           bg={'accent.200'}
           placeholder={'Enter Here'}
           keyboardType="email-address"
         />
         <Text mb={2} bold>
-          Secondary Mobile Number(Optional)
+          Mobile Number*
         </Text>
         <Input
           InputLeftElement={
@@ -43,11 +44,24 @@ export const PersonalDetails = ({navigation}) => {
             </Text>
           }
           variant={'filled'}
+          value={mobileNo}
+          onChangeText={txt => setMobileNo(txt)}
           rounded={15}
           bg={'accent.200'}
           placeholder={'Enter Here'}
           fontSize="sm"
+          mb={5}
           keyboardType="number-pad"
+        />
+        <Text mb={2} bold>
+          Secondary Mobile Number(Optional)
+        </Text>
+        <Input
+          variant={'filled'}
+          rounded={15}
+          mb={5}
+          bg={'accent.200'}
+          placeholder={'Enter Here'}
         />
       </View>
       <View flex={1} justifyContent={'flex-end'}>
@@ -65,12 +79,8 @@ export const PersonalDetails = ({navigation}) => {
               bg={isContinueDisabled ? 'accent.500' : 'primary.500'}
               _text={{fontSize: 'lg'}}
               disabled={isContinueDisabled}
-              onPress={() =>
-                navigation.replace('App', {
-                  screen: 'HomePage',
-                })
-              }>
-              Continue
+              onPress={() => {}}>
+              Save
             </Button>
           </Center>
         </View>

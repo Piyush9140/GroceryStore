@@ -1,13 +1,11 @@
 import 'react-native-gesture-handler';
 import React from 'react';
-import {Login} from './screens/Auth/Login';
 import {NativeBaseProvider} from 'native-base';
 import {theme} from './utils/constants';
-import {OTPScreen} from './screens/Auth/OTP';
-import {Splash} from './screens/Auth/Splash';
 import {NavigationContainer} from '@react-navigation/native';
 import {createStackNavigator} from '@react-navigation/stack';
 import {AuthStack} from './navigation/AuthNavigation';
+import {AppStack} from './navigation/AppNavigation';
 
 const Stack = createStackNavigator();
 
@@ -19,6 +17,11 @@ function App() {
           <Stack.Screen
             name="Auth"
             component={AuthStack}
+            options={{headerShown: false}}
+          />
+          <Stack.Screen
+            name="App"
+            component={AppStack}
             options={{headerShown: false}}
           />
         </Stack.Navigator>
