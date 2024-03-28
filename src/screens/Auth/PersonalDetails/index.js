@@ -1,6 +1,5 @@
 import {Button, Center, Input, Text, View} from 'native-base';
 import React, {useState} from 'react';
-import {StyleSheet} from 'react-native';
 
 export const PersonalDetails = () => {
   const [name, setName] = useState('');

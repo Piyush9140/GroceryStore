@@ -1,13 +1,14 @@
 import React from 'react';
-import {StyleSheet, View, Image} from 'react-native';
+import { View, Image} from 'react-native';
 import {Button, Input, Text, useTheme} from 'native-base';
+import { styles } from './styles';
 
 export const Login = ({navigation}) => {
   return (
     <View flex={1} bg="primary.50">
       <View style={styles.imageBackground}>
         <Image
-          source={require('../assets/images/20450388_Vitamins.png')}
+          source={require('../../../assets/images/20450388_Vitamins.png')}
           style={styles.image}
           resizeMode="cover"
         />
@@ -59,27 +60,4 @@ export const Login = ({navigation}) => {
   );
 };
 
-const styles = StyleSheet.create({
-  imageBackground: {
-    flex: 0.7,
-    alignItems: 'center',
-    justifyContent: 'center',
-    backgroundColor: '#FFF7ED',
-  },
-  image: {
-    height: '100%',
-    width: '100%',
-  },
-  inputSection: {
-    flex: 0.3,
-    alignItems: 'center',
-    paddingHorizontal: 20,
-    backgroundColor: '#FFF7ED',
-  },
-  footer: {
-    flex: 1,
-    flexDirection: 'row',
-    alignItems: 'center',
-    padding: 10,
-  },
-});
+

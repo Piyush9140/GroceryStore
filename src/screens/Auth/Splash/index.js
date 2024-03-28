@@ -14,7 +14,7 @@ export const Splash = ({navigation}) => {
     <>
       <StatusBar translucent backgroundColor={'transparent'} />
       <ImageBackground
-        source={require('../assets/images/Onboarding.png')}
+        source={require('../../../assets/images/Onboarding.png')}
         style={styles.imageBackground}></ImageBackground>
     </>
   );
