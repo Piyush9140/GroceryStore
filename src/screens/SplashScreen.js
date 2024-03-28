@@ -5,7 +5,9 @@ import {ImageBackground, StyleSheet, Dimensions} from 'react-native';
 export const Splash = ({navigation}) => {
   useEffect(() => {
     setTimeout(() => {
-      navigation.replace('Login');
+      navigation.replace('Auth', {
+        screen: 'Login'
+      });
     }, 3000);
   }, []);
   return (

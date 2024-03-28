@@ -3,7 +3,6 @@ import {StyleSheet, View, Image} from 'react-native';
 import {Button, Input, Text, useTheme} from 'native-base';
 
 export const Login = ({navigation}) => {
-  const {colors} = useTheme();
   return (
     <View flex={1} bg="primary.50">
       <View style={styles.imageBackground}>
@@ -41,7 +40,9 @@ export const Login = ({navigation}) => {
           rounded={13}
           bg="primary.500"
           onPress={() => {
-            navigation.navigate('OTP');
+            navigation.navigate('Auth', {
+              screen: 'OTP',
+            });
           }}>
           Continue
         </Button>

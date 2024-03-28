@@ -1,13 +1,13 @@
 import React from 'react';
 import {createStackNavigator} from '@react-navigation/stack';
-import {Login} from '../screens/Loginscreen';
-import {OTPScreen} from '../screens/OTPScreen';
-import {Splash} from '../screens/SplashScreen';
-import {PersonalDetails} from '../screens/PersonalDetails';
+import { Login } from '../../screens/LoginScreen';
+import {OTPScreen} from '../../screens/OTPScreen';
+import {Splash} from '../../screens/SplashScreen';
+import {PersonalDetails} from '../../screens/PersonalDetails';
 
 const Stack = createStackNavigator();
 
-export const MyStack = () => {
+export const AuthStack = () => {
   return (
     <Stack.Navigator>
       <Stack.Screen
