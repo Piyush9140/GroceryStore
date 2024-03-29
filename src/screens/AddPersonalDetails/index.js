@@ -1,7 +1,7 @@
 import {Button, Center, Input, Text, View} from 'native-base';
 import React, {useState} from 'react';
 
-export const PersonalDetails = ({navigation}) => {
+export const AddPersonalDetails = ({navigation}) => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const isContinueDisabled = name === '' || email === '';
@@ -64,12 +64,7 @@ export const PersonalDetails = ({navigation}) => {
               rounded={12}
               bg={isContinueDisabled ? 'accent.500' : 'primary.500'}
               _text={{fontSize: 'lg'}}
-              disabled={isContinueDisabled}
-              onPress={() =>
-                navigation.replace('App', {
-                  screen: 'HomePage',
-                })
-              }>
+              disabled={isContinueDisabled}>
               Continue
             </Button>
           </Center>

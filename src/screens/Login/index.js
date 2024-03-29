@@ -1,14 +1,14 @@
 import React from 'react';
-import { View, Image} from 'react-native';
+import {View, Image} from 'react-native';
 import {Button, Input, Text, useTheme} from 'native-base';
-import { styles } from './styles';
+import {styles} from './styles';
 
 export const Login = ({navigation}) => {
   return (
     <View flex={1} bg="primary.50">
       <View style={styles.imageBackground}>
         <Image
-          source={require('../../../assets/images/20450388_Vitamins.png')}
+          source={require('../../assets/images/20450388_Vitamins.png')}
           style={styles.image}
           resizeMode="cover"
         />
@@ -59,5 +59,3 @@ export const Login = ({navigation}) => {
     </View>
   );
 };
-
-

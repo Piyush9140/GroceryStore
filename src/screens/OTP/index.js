@@ -1,6 +1,6 @@
 import {View, Text, Center} from 'native-base';
 import React from 'react';
-import {OTP} from '../../../components/OTP';
+import { OTP } from './OTP_component';
 import {ImageBackground, StyleSheet, Dimensions} from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
 import {styles} from './styles';
@@ -13,7 +13,7 @@ export const OTPScreen = ({navigation}) => {
   };
   return (
     <ImageBackground
-      source={require('../../../assets/images/20450388_Vitamins.png')}
+      source={require('../../assets/images/20450388_Vitamins.png')}
       style={styles.imageBackground}
       imageStyle={{opacity: 0.5}}>
       <View h={300} w={'100%'} position={'absolute'} top={40}>

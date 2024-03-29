@@ -1,14 +1,15 @@
 import React from 'react';
 import {createStackNavigator} from '@react-navigation/stack';
-import {HomePage} from '../../screens/Home/HomePage';
-import {Settings} from '../../screens/Home/Settings';
-import {PersonalDetails} from '../../screens/Home/PersonalDetails';
-import {Help} from '../../screens/Home/Help';
+import {HomePage} from '../../screens/HomeScreen';
+import {Settings} from '../../screens/Settings';
+import {PersonalDetails} from '../../screens/PersonalDetails';
+import {Help} from '../../screens/Help';
 import {ChevronLeftIcon} from 'native-base';
+import {Splash} from '../../screens/Splash';
 
 const Stack = createStackNavigator();
 
-export const AppStack = () => {
+export const AppNavigation = () => {
   return (
     <Stack.Navigator>
       <Stack.Screen

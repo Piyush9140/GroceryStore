@@ -13,13 +13,13 @@ export const Settings = ({navigation}) => {
       screen: 'Help & Support',
     });
   };
-  const ordersIcon = require('../../../assets/images/fi-br-shopping-bag.png');
-  const FAQIcon = require('../../../assets/images/fi-br-comment.png');
-  const addressIcon = require('../../../assets/images/fi-br-location-alt.png');
-  const refundIcon = require('../../../assets/images/fi-br-redo-alt.png');
-  const detailsIcon = require('../../../assets/images/fi-br-user.png');
-  const suggestionIcon = require('../../../assets/images/fi-br-bulb.png');
-  const notifsIcon = require('../../../assets/images/fi-br-bell.png');
+  const ordersIcon = require('../../assets/images/fi-br-shopping-bag.png');
+  const FAQIcon = require('../../assets/images/fi-br-comment.png');
+  const addressIcon = require('../../assets/images/fi-br-location-alt.png');
+  const refundIcon = require('../../assets/images/fi-br-redo-alt.png');
+  const detailsIcon = require('../../assets/images/fi-br-user.png');
+  const suggestionIcon = require('../../assets/images/fi-br-bulb.png');
+  const notifsIcon = require('../../assets/images/fi-br-bell.png');
   return (
     <>
       <View
@@ -32,7 +32,7 @@ export const Settings = ({navigation}) => {
         mt={0.4}>
         <Center bg={'primary.500'} borderRadius={100} h={10} w={10} mr={2}>
           <Image
-            source={require('../../../assets/images/account_circle.png')}
+            source={require('../../assets/images/account_circle.png')}
             alt="avatar"
             borderRadius={100}
             resizeMode="contain"
