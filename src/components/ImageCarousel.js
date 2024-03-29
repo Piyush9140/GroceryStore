@@ -1,18 +1,18 @@
-import { View, Text, Image, ScrollView ,StyleSheet} from "react-native";
-import imageCarouselData from "../assets/imageCarousel";
+import { View, Image, ScrollView ,StyleSheet} from "react-native";
+import ImageCarouselData from "../assets/ImageCarousel";
 import React from "react";
 
 export default function ImageCarousel() {
   return (
     <View style={styles.CarouselItem}>
     <ScrollView horizontal showsHorizontalScrollIndicator={false} >
-      {imageCarouselData.map((imageCarousel) => {
+      {ImageCarouselData.map((ImageCarousel) => {
         return (
-          <View key={imageCarousel.id} >
+          <View key={ImageCarousel.id} >
             <Image
-              source={{ uri: imageCarousel.image }}
-              alt={imageCarousel.title}
-              style={styles.img}
+              source={{ uri: ImageCarousel.image }}
+              alt={ImageCarousel.title}
+              style={styles.Img}
             />
           </View>
         );
@@ -25,7 +25,7 @@ const styles = StyleSheet.create({
   CarouselItem: {
       flex: 1,
   },
-  img: {
+  Img: {
       width: 340,
       margin:10,
       height: 200,

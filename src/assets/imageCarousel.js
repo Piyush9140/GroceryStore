@@ -1,4 +1,4 @@
-const imageCarouselData = [
+const ImageCarouselData = [
   {
     id: "1",
     image:
@@ -21,4 +21,4 @@ const imageCarouselData = [
   },
 ];
 
-export default imageCarouselData;
+export default ImageCarouselData;
