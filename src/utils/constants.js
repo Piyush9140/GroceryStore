@@ -57,20 +57,5 @@ export const colors = {
 };
 
 export const fonts = {
-  Bold: 'Inter-Bold',
-  ExtraBold: 'Inter-ExtraBold',
-  Light: 'Inter-Light',
-  ExtraLight: 'Inter-Extra',
-  Medium: 'Inter-Medium',
-  Regular: 'Inter-Regular',
-  Thin: 'Inter-Thin',
-  Black: 'Inter-Black',
-  DisplayMedium: 'InterDisplay-Medium',
-  DisplayLarge: 'InterDisplay-ExtraBold',
-  DisplaySmall: 'InterDisplay-Light',
-  DisplayRegular: 'InterDisplay-Regular',
-  DisplaySemiBold: 'InterDisplay-SemiBold',
-  DisplayThin: 'InterDisplay-Thin',
-  DisplayBlack: 'InterDisplay-Black',
-  DisplayBold: 'InterDisplay-Bold',
+  Inter: 'Inter',
 };
